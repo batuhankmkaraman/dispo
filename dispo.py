@@ -5,10 +5,10 @@ def compute_dispo_loss(
     log_prob,
     advantages,
     response_mask,
-    eps_low_pos=1e9,
-    eps_high_pos=5.0,
-    eps_low_neg=1e9,
-    eps_high_neg=5.0,
+    eps_low_pos=0.2,
+    eps_high_pos=10.0,
+    eps_low_neg=1.0,
+    eps_high_neg=100.0,
 ):
     """
     Naive DISPO loss:
